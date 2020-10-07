@@ -47,7 +47,7 @@ func decodeRSAPublicKey(data string) (crypto.PublicKey, error) {
 	if err != nil {
 		return nil, err
 	}
-	if len(exp) != 2 {
+	if len(exp) != 2 && len(exp) != 3 {
 		return nil, ErrUnknownFormat
 	}
 
